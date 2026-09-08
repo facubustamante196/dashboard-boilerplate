@@ -10,17 +10,19 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 # AGENTS — Dashboard TDD harness
 
-White-label dashboard base. Agents follow this file + `.cursor/rules/*.mdc`. Product work is TDD-only via `feature_list.json`.
+White-label dashboard base. Agents follow this file (Cursor, Claude Code, or any other agent). Product work is TDD-only via `feature_list.json`.
 
 ## Roles
 
-| Role | Rule | Touches | Does not touch |
-|------|------|---------|----------------|
-| **Leader** | `leader.mdc` | `feature_list.json`, `progress/` | `src/`, `tests/`, `app/` product logic |
-| **Test-Author** | `test-author.mdc` | `tests/<feature>/`, `specs/<feature>/` | Production code (`src/`, `app/`) |
-| **Implementer** | `implementer.mdc` | `src/`, `app/` (Green only) | Tests |
-| **Refactorer** | `refactorer.mdc` | Production cleanup | Changing test intent |
-| **Reviewer** | `reviewer.mdc` | `progress/review_*.md` only | Code / tests edits |
+Tool-agnostic roles. Optional local IDE rules may mirror them; the source of truth is this file.
+
+| Role | Touches | Does not touch |
+|------|---------|----------------|
+| **Leader** | `feature_list.json`, `progress/` | `src/`, `tests/`, `app/` product logic |
+| **Test-Author** | `tests/<feature>/`, `specs/<feature>/` | Production code (`src/`, `app/`) |
+| **Implementer** | `src/`, `app/` (Green only) | Tests |
+| **Refactorer** | Production cleanup | Changing test intent |
+| **Reviewer** | `progress/review_*.md` only | Code / tests edits |
 
 ## Flow
 
@@ -56,7 +58,6 @@ tests/<feature>/                  → all tests for that feature (`// T<n>:`)
 specs/<feature>/                  → tests_rationale.md
 progress/                         → current.md, history.md, impl_*, refactor_*, review_*
 docs/                             → tdd, architecture, conventions, verification
-.cursor/rules/                    → role rules
 ```
 ## Session start
 

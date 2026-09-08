@@ -4,7 +4,7 @@ Append-only log. Newest entries at the bottom.
 
 ## 2026-09-08 — harness bootstrap
 
-- Installed Cursor TDD multi-agent harness + Next.js MVC skeleton
+- Installed TDD multi-agent harness + Next.js MVC skeleton
 - Features `wl-theme-tokens`, `wl-shell-nav`, `wl-access-levels` seeded as `pending` (debate before Red)
 - Smoke test `tests/harness/health.test.ts` green
 

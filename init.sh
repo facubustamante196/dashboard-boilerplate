@@ -32,7 +32,6 @@ dirs=(
   specs
   progress
   docs
-  .cursor/rules
 )
 for d in "${dirs[@]}"; do
   [[ -d "$d" ]] || fail "Missing directory: $d"
@@ -49,11 +48,6 @@ files=(
   docs/architecture.md
   docs/conventions.md
   docs/verification.md
-  .cursor/rules/leader.mdc
-  .cursor/rules/test-author.mdc
-  .cursor/rules/implementer.mdc
-  .cursor/rules/refactorer.mdc
-  .cursor/rules/reviewer.mdc
   vitest.config.mts
 )
 for f in "${files[@]}"; do

@@ -24,8 +24,8 @@ The init scripts verify:
 
 - Node.js and pnpm available
 - `package.json` present
-- Folders: `src/domain`, `src/services`, `src/controllers`, `tests`, `specs`, `progress`, `.cursor/rules`
-- Required rule files under `.cursor/rules/`
+- Folders: `src/domain`, `src/services`, `src/controllers`, `tests`, `specs`, `progress`
+- Harness entrypoints: `AGENTS.md`, `CHECKPOINTS.md`, `feature_list.json`
 - `pnpm test` exits 0 (after Green; during Red, Leader/Test-Author document intentional failure instead of claiming init green)
 
 ## Reviewer

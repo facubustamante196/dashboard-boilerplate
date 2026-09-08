@@ -1,6 +1,6 @@
 # dashboard-boilerplate
 
-Base white-label de un **dashboard/admin** reutilizable entre clientes (e-commerce, medios, telemedicina, etc.). No es un producto terminado: es la plantilla con arquitectura desacoplada y un arnés TDD multi-agente para Cursor.
+Base white-label de un **dashboard/admin** reutilizable entre clientes (e-commerce, medios, telemedicina, etc.). No es un producto terminado: es la plantilla con arquitectura desacoplada y un arnés TDD multi-agente (Cursor, Claude Code u otro).
 
 ## Stack
 
@@ -62,17 +62,19 @@ Caso de uso neutro para probar el desacople (sirve para stock, turnos, publicaci
 4. Controller que resuelve el port vía `composition`
 5. Test con **mock** del port — el service se prueba sin integración real
 
-## Arnés TDD (Cursor)
+## Arnés TDD (multi-agente)
 
-El repo incluye gobernanza multi-agente (no es lógica de producto):
+El repo incluye gobernanza TDD (no es lógica de producto), usable con cualquier agente:
 
-- `AGENTS.md` — roles y flujo
+- `AGENTS.md` — roles y flujo (Leader, Test-Author, Implementer, Refactorer, Reviewer)
 - `feature_list.json` — features (`pending → tests_ready → in_progress → refactor → done`)
-- `.cursor/rules/` — Leader, Test-Author, Implementer, Refactorer, Reviewer
+- `CHECKPOINTS.md` — criterios Red / Green / Refactor / review
 - Gate humano: `tests_ready` → `in_progress` solo con el mensaje **`aprobado`**
 - Una sola feature `in_progress` a la vez
 
-Ver también `CHECKPOINTS.md` y `docs/tdd.md`.
+Las reglas locales de IDE (p. ej. Cursor) son opcionales y no se versionan en este repo.
+
+Ver también `docs/tdd.md`.
 
 ## Cómo arrancar
 

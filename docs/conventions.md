@@ -39,5 +39,5 @@ Use **pnpm** only (`pnpm install`, `pnpm test`, `pnpm lint`, `pnpm dev`).
 ## Agent discipline
 
 - One feature `in_progress` at a time (`max_in_progress: 1`).
-- Role boundaries in `.cursor/rules/` are mandatory.
+- Role boundaries in `AGENTS.md` are mandatory (any agent tool).
 - Leader never edits `src/` or `tests/`.
