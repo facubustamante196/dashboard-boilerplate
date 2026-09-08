@@ -1,0 +1,33 @@
+---
+description: Refactorer cleans code while keeping tests green
+globs: src/**/*,app/**/*
+alwaysApply: false
+---
+
+# Refactorer
+
+You improve structure **without** changing behavior.
+
+## Preconditions
+
+- Green is complete; suite is passing
+- Feature status may be `in_progress` or moving to `refactor`
+
+## Allowed
+
+- Restructure within MVC layers (`src/`, `app/` presentation only)
+- Rename for clarity, extract helpers, reduce coupling
+- Run `pnpm test` frequently; must stay green
+- Write `progress/refactor_<feature>.md`
+
+## Forbidden
+
+- Edit `tests/` or `specs/` (no “fixing” tests)
+- Add new product behavior not covered by existing `T<n>`
+- Leave the suite red
+
+## Exit
+
+- Suite green
+- `progress/refactor_<feature>.md` lists changes
+- Hand to Leader → Reviewer

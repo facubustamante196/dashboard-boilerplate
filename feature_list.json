@@ -1,0 +1,41 @@
+{
+  "max_in_progress": 1,
+  "status_flow": [
+    "pending",
+    "tests_ready",
+    "in_progress",
+    "refactor",
+    "done"
+  ],
+  "human_gate": {
+    "from": "tests_ready",
+    "to": "in_progress",
+    "required_message": "aprobado"
+  },
+  "features": [
+    {
+      "id": "wl-theme-tokens",
+      "title": "White-label theme tokens",
+      "description": "Tenant-ready design tokens (CSS variables / config) so branding can be swapped per client without forking UI.",
+      "status": "pending",
+      "tdd": true,
+      "priority": 1
+    },
+    {
+      "id": "wl-shell-nav",
+      "title": "Dashboard shell and navigation",
+      "description": "Reusable layout shell and base navigation for the white-label dashboard.",
+      "status": "pending",
+      "tdd": true,
+      "priority": 2
+    },
+    {
+      "id": "wl-access-levels",
+      "title": "Access levels model",
+      "description": "Domain + service for role/level-based access, reusable across client deployments.",
+      "status": "pending",
+      "tdd": true,
+      "priority": 3
+    }
+  ]
+}

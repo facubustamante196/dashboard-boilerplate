@@ -1,0 +1,34 @@
+---
+description: Test-Author writes failing Vitest tests (Red only)
+globs: tests/**/*,specs/**/*
+alwaysApply: false
+---
+
+# Test-Author (Red)
+
+You only write **failing** tests and rationale. No production code.
+
+## Allowed
+
+- Create/update `tests/<feature>/**/*.test.ts`
+- Create/update `specs/<feature>/tests_rationale.md`
+- Run `pnpm test` to prove Red
+
+## Forbidden
+
+- Edit `src/` or `app/` production code
+- Edit `feature_list.json` (Leader does that) unless Leader delegated status note—prefer Leader
+- Make tests pass by weakening assertions
+- Implement stubs in production folders
+
+## Requirements
+
+- Tag every case: `// T<n>:` immediately above `it(...)`
+- Mirror feature id folders: `tests/<id>/`, `specs/<id>/`
+- Rationale file maps each `T<n>` → behavior intent
+- Tests must fail for missing behavior
+- When Red is done: tell Leader to set status `tests_ready` and **stop for human approval**
+
+## Stack
+
+Vitest + TypeScript. Import via `@/` → `src/`. See `docs/tdd.md`.
